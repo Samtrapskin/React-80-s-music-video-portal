@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import SearchBar from './components/Search_Bar';
+// import SearchBar from './components/Search_Bar';
 import YTSearch from 'youtube-api-search';
 import VideoList from './components/Video_List';
 import VideoDetail from './components/Video_Detail';
@@ -42,7 +42,7 @@ class App extends Component {
         return (
 
             <div>
-                <SearchBar onSearchTermChange = {videoSearch} />
+                {/* <SearchBar onSearchTermChange = {videoSearch} /> */}
                 <Television  />
                 <VideoDetail className="videoBox" video= {this.state.selectedVideo} />
                 <VideoList
