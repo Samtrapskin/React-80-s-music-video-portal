@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import SearchBar from './components/search_Bar';
 import YTSearch from 'youtube-api-search';
 import VideoList from './components/Video_List';
+import VideoDetail from './components/Video_Detail';
+// import Television from './components/Television';
 //Create a new component. This component should produce some 
 
 
@@ -10,7 +12,7 @@ import VideoList from './components/Video_List';
 
 const APIkey = 'AIzaSyB3lLL3VIRFc2gIDOQkpJCxELNtvqR5lFU';
 
-YTSearch ({key: APIkey, term: '1980s'}, function (data) {
+YTSearch ({key: APIkey, term: '1980s music videos'}, function (data) {
 });
 
 //html
@@ -29,7 +31,9 @@ class App extends Component {
 
             <div>
                 <SearchBar />
+                <VideoDetail video= {this.state.videos[0]} />
                 <VideoList videos = {this.state.videos} />
+                {/* <Television /> */}
             </div>
         )
    
