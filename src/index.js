@@ -43,9 +43,9 @@ class App extends Component {
 
             <div>
                 {/* <SearchBar onSearchTermChange = {videoSearch} /> */}
-                <Television  />
+                {/* <Television  /> */}
                 <VideoDetail className="videoBox" video= {this.state.selectedVideo} />
-                <VideoList
+                <VideoList className="vidList"
                 onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
                 //the onClick Handler for this is defined in Video_List_Item
 
@@ -59,4 +59,4 @@ class App extends Component {
 }
 //take this components html, and put it on the DOM//
 
-ReactDOM.render(<App />, document.querySelector('.container'))
+ReactDOM.render(<App />, document.querySelector('body'))
